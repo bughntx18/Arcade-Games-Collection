@@ -121,6 +121,11 @@ Use your keyboard to interact with the terminal games directly!
 
 ---
 
+
+https://github.com/user-attachments/assets/20530f74-036c-46f6-b929-c5f5ce228280
+
+
+
 ## 📁 File Structure
 
 ```bash
