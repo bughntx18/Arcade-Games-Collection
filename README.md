@@ -134,8 +134,8 @@ Use your keyboard to interact with the terminal games directly!
 
 ## 🧑‍💻 Authors
 
-**Moayad Maher** <br>
-**Abdelmseh Nabil** <br>
+**Moayad Maher** 
+**Abdelmseh Nabil** 
 **Ahmed Mahmoud** 
 
 
