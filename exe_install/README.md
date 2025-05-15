@@ -18,3 +18,7 @@ This guide explains how to run the `game5` executable file from the VS Code term
 4. **Launch**
    ```bash
    game5
+
+---
+
+# **Enjoy! 🌟**
