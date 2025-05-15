@@ -157,8 +157,7 @@ https://github.com/user-attachments/assets/20530f74-036c-46f6-b929-c5f5ce228280
 ```bash
 .
 ├── game5.lf       # Main LF file containing all game logic
-├── bin/           # Contains compiled binaries after `make`
-└── README.md      # This file
+└── bin/           # Contains compiled binaries after `make`
 ```
 
 ---
