@@ -1,14 +1,37 @@
-# 🎮 Arcade Game Collection in Lingua Franca (C Target)
+# 🎮 Arcade Game Collection
 
-This project is a terminal-based interactive arcade game suite developed using **Lingua Franca** (LF) targeting **C**. It includes three classic games:
+# 🧠 Introduction
 
-- **Whac-A-Mole**
-- **Tap War**
-- **Rock, Paper, Scissors**
+This system is a **timed reactive application** developed using the **Lingua Franca (LF)** coordination language with a **C target**. It demonstrates how interactive software — such as an arcade-style game collection — can be built on top of a **deterministic and concurrent reactive model**. Instead of managing low-level threads or event loops manually, the system relies on **logical time**, **reactors**, and **reactions** to manage interactions and timing with precision.
 
-The game is controlled using single keypress input without needing to press Enter.
+At its core, the application models **user input** (via keyboard) and **internal behavior** (such as timers and game logic) as **events** that trigger **reactions** across independent computational components known as **reactors**. These reactors communicate **asynchronously** at runtime, but are synchronized **logically** through **timestamps** and **event scheduling**.
 
 ---
+
+# 🧩 Reactive Model and System Design
+
+## 🧭 Timed Reactive Behavior
+
+One of the core design elements of this system is its **timed behavior**:
+
+- **Timers** (e.g., a 10-second countdown for a mini-game) are implemented as **logical actions**.
+- `lf_schedule(...)` is used to schedule these actions at precise points in **logical time**.
+- Once scheduled, a corresponding **reaction** executes **exactly when the timestamp is reached**.
+- This models **real-time deadlines** and **durations** allows the **control** of time-interactions.
+
+---
+
+## 🔄 Concurrency, Synchrony & Asynchrony
+
+This system exhibits a rich combination of execution properties:
+
+| Concept            | Description                                                                 |
+|--------------------|-----------------------------------------------------------------------------|
+| **Synchronous (Logical)**  | All reactions at the same logical time appear to execute simultaneously. |
+| **Asynchronous (Physical)** | User inputs (keyboard events) and OS callbacks arrive in real time.        |
+
+---
+
 
 ## 🚀 How to Play
 
@@ -28,9 +51,11 @@ Select a game (press key):
 
 To **exit** a game or return to the main menu, press **0**.
 
+The game is controlled using single keypress input without needing to press Enter.
+
 ---
 
-## 🧠 Features
+## 💡 Features
 
 - Raw terminal input handling for real-time interaction.
 - Multi-game logic within a single Lingua Franca application.
@@ -40,6 +65,7 @@ To **exit** a game or return to the main menu, press **0**.
 ---
 
 ## ⚙️ Installation
+### 🔧 Prerequisites
 
 ### 🧩 Java Development Kit (JDK)
 
@@ -139,13 +165,9 @@ https://github.com/user-attachments/assets/20530f74-036c-46f6-b929-c5f5ce228280
 
 ## 🧑‍💻 Authors
 
-**Moayad Maher** 
-**Abdelmseh Nabil** 
+**Moayad Maher &** 
+**Abdelmseh Nabil &** 
 **Ahmed Mahmoud** 
 
 
 ---
-
-## 📜 License
-
-This project is licensed under the MIT License.
